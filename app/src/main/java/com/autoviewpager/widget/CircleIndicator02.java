@@ -10,7 +10,7 @@ import android.util.AttributeSet;
 import android.view.View;
 
 /**
- * 轮播图圆点指示器
+ * 轮播图圆点指示器111
  * Created by sunyan on 17/4/17.
  */
 
