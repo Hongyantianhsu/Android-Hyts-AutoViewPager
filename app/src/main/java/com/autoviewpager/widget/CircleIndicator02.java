@@ -10,6 +10,7 @@ import android.util.AttributeSet;
 import android.view.View;
 
 /**
+ * 轮播图圆点指示器
  * Created by sunyan on 17/4/17.
  */
 
@@ -46,16 +47,16 @@ public class CircleIndicator02 extends View {
         int width = getWidth();
         int height = getHeight();
         int r = 10;//圆半径
-        int x = getPaddingLeft()+r;//圆x坐标
         int y = height/2;//圆y坐标
-        int padding = 10;
+        int padding = 10;//圆点之间的间隔
+        int startX = (width - 2*r*(count+1) - padding*count)/2;
         for (int i = 0 ; i < count ; i++){
             if (select == i){
-                paint.setColor(Color.RED);
-                canvas.drawCircle(x+getPaddingLeft()+(2*r+padding)*i , y , r*1.5f , paint);
+                paint.setColor(Color.WHITE);
+                canvas.drawCircle(startX+r+(2*r+padding)*i , y , r*1.5f , paint);
             }else{
                 paint.setColor(Color.GRAY);
-                canvas.drawCircle(x+getPaddingLeft()+(2*r+padding)*i , y , r , paint);
+                canvas.drawCircle(startX+r+(2*r+padding)*i , y , r , paint);
             }
         }
         canvas.restore();
