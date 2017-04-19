@@ -52,7 +52,7 @@ public class CircleIndicator02 extends View {
         int startX = (width - 2*r*(count+1) - padding*count)/2;
         for (int i = 0 ; i < count ; i++){
             if (select == i){
-                paint.setColor(Color.WHITE);
+                paint.setColor(Color.RED);
                 canvas.drawCircle(startX+r+(2*r+padding)*i , y , r*1.5f , paint);
             }else{
                 paint.setColor(Color.GRAY);
